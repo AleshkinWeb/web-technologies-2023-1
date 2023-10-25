@@ -1,9 +1,0 @@
-@import "./global.css";
-@import "./fonts.css";
-@import "./utils.css";
-
-.head2 {
-    font-weight: 500;
-    font-size: 44px;
-    text-align: center;
-}
