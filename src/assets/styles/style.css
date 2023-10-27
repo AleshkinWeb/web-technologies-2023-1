@@ -10,6 +10,10 @@ h1, h2, h3, h4, h5{
     margin: 0 0 0 0;
 }
 
+body{
+    width: 1440px;
+}
+
 .topHeaderBlock{
     top: 24px;
     left: 108px;
@@ -27,7 +31,7 @@ h1, h2, h3, h4, h5{
 
 .topHeaderBlock a{
     font-feature-settings: 'clig' off, 'liga' off;
-    font-family: "SF Pro Text";
+    font-family: SF Pro Text;
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
@@ -38,7 +42,7 @@ h1, h2, h3, h4, h5{
 .headerName{
     color: #2D66EE;
     font-feature-settings: 'clig' off, 'liga' off;
-    font-family: "Inter-Bold";
+    font-family: Inter-Bold;
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
@@ -80,10 +84,13 @@ h1, h2, h3, h4, h5{
 }
 
 .headerInfo{
+    position: relative;
     height: 900px;
+    width: 1440px;
     flex-shrink: 0;
     background: #F2F4F7;
     z-index: 1;
+    overflow: hidden;
 }
 
 .commentImage{
@@ -91,15 +98,13 @@ h1, h2, h3, h4, h5{
     width: 292px;
     height: 632px;
     transform: rotate(-12deg);
-    flex-shrink: 0;
     border-radius: 24px;
-    display: block;
 }
 
 .commentImageMain{
     position:absolute;
-    width: 310.49px;
-    height: 672.315px;
+    width: 310px;
+    height: 672px;
     transform: rotate(-12deg);
     flex-shrink: 0;
     border-radius: 24px;
