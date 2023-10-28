@@ -15,3 +15,8 @@
     font-family: "SF Pro Text Semibold";
     src: url("/static/fonts/SFProText-Semibold.ttf");
 }
+
+@font-face {
+    font-family: "SF Pro Display";
+    src: url("/static/fonts/SF-Pro-Display-Medium.otf");
+}
