@@ -29,7 +29,19 @@ body{
     z-index: 100;
 }
 
-.topHeaderBlock a{
+.headerName{
+    color: #2D66EE;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: -0.154px;
+
+}
+
+.topHeaderBlock{
     font-feature-settings: 'clig' off, 'liga' off;
     font-family: SF Pro Text;
     font-size: 14px;
@@ -37,19 +49,6 @@ body{
     font-weight: 500;
     line-height: 18px;
     letter-spacing: -0.154px;
-}
-
-.headerName{
-    color: #2D66EE;
-    font-feature-settings: 'clig' off, 'liga' off;
-    font-family: Inter-Bold;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 18px;
-    letter-spacing: -0.154px;
-    width: 120px;
-    height: 24px;
 }
 
 .headerNavigation{
