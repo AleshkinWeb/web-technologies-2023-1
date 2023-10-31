@@ -10,512 +10,1594 @@ p, h1, h2, h3, h4, h5{
     margin: 0 0 0 0;
 }
 
-body{
-    width: 1440px;
+@media screen and (min-device-width: 1440px) {
+
+    .topHeaderBlock{
+        top: 24px;
+        left: 108px;
+        box-sizing: border-box;
+        border-radius: 12px;
+        background: #FFF;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+        display: inline-flex;
+        padding: 16px 24px;
+        align-items: center;
+        gap: 80px;
+        position: fixed;
+        z-index: 100;
+    }
+
+    .mobile_menu{
+        display: none;
+    }
+
+    .headerName{
+        color: #2D66EE;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Inter, serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 18px;
+        letter-spacing: -0.154px;
+    }
+
+    .topHeaderBlock{
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: SF Pro Text, serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 18px;
+        letter-spacing: -0.154px;
+    }
+
+    .headerNavigation{
+        display: flex;
+        align-items: flex-start;
+        gap: 24px;
+    }
+
+    .headerContactsBlock{
+        display: flex;
+        align-items: flex-start;
+        gap: 32px;
+    }
+
+    .contactWithIcon{
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .headerContacts{
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    .headerNavigation a {
+        color: #101828;
+    }
+
+    .headerContacts a{
+        color: #2D66EE;
+    }
+
+    .headerInfo{
+        position: relative;
+        height: 900px;
+        width: 100%;
+        flex-shrink: 0;
+        background: #F2F4F7;
+        z-index: 1;
+        overflow: hidden;
+    }
+
+    .commentImage{
+        position:absolute;
+        width: 292px;
+        height: 632px;
+        transform: rotate(-12deg);
+        border-radius: 24px;
+    }
+
+    .image_1{
+        left: 680px;
+        top:-565px;
+    }
+
+    .image_2{
+        left: 1000px;
+        top:-633px;
+    }
+
+    .image_3{
+        left: 1150px;
+        top:25px;
+    }
+
+    .image_4{
+        left: 950px;
+        top:750px;
+    }
+
+    .image_5{
+        left: 1280px;
+        top:680px;
+    }
+
+    .commentImageMain{
+        position:absolute;
+        width: 310px;
+        height: 672px;
+        transform: rotate(-12deg);
+        flex-shrink: 0;
+        border-radius: 24px;
+        box-shadow: 0 0 96px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.16);
+        left: 815px;
+        top:72px;
+    }
+    .blockAboutTechnologies{
+        margin-top:0;
+        z-index: 2;
+        background: #FFFFFF;
+        width: 100%;
+        height: 500px;
+    }
+
+    .blockAboutIndustries{
+        margin-top:0;
+        z-index: 2;
+        background: #F2F4F7;
+    }
+
+    .mainInfoCompany{
+        top: 160px;
+        left: 108px;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        width: 600px;
+        z-index: 1;
+        position: relative;
+    }
+
+    .mainInfoCompany_header{
+        color: #101828;
+        margin: 0 0 0 0;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Inter, serif;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 144%;
+        letter-spacing: 0.326px;
+    }
+
+    span{
+        color: #306FF5;
+    }
+
+    .mainInfoCompany p{
+        margin: 0 0 0 0;
+        color: #101828;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: SF Pro Text, serif;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: -0.24px;
+    }
+
+    .contactWithCompany{
+        top:444px;
+        left:108px;
+        display: inline-flex;
+        padding: 24px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 32px;
+        border-radius: 12px;
+        background: #FFF;
+        box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.16), 0 0 2px 0 rgba(0, 0, 0, 0.08);
+        position: absolute;
+        z-index: 1;
+        width: 676px;
+        height: 186px;
+    }
+    .contactWithCompany h2{
+        margin: 0 0 0 0;
+        width: 600px;
+        color: #101828;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Inter, serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 24px;
+        letter-spacing: 0.38px;
+    }
+
+    .clientContacts{
+        display: flex;
+        align-items: center;
+        gap: 24px;
+    }
+    .clientContacts form{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    .clientContacts label{
+        color: #667085;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: SF Pro Text, serif;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 16px;
+        letter-spacing: -0.078px;
+    }
+
+    .clientContacts input{
+        color: #101828;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: SF Pro Text, serif;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: -0.408px;
+        outline: 0;
+    }
+
+    .clientContacts button{
+        display: flex;
+        padding: 11px 24px;
+        align-items: flex-start;
+        gap: 8px;
+        color: #FFF;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: SF Pro Text Semibold, serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 18px;
+        letter-spacing: -0.154px;
+        border-radius: 8px;
+        border-width: 0;
+        border-color: #2D66EE;
+        background: #2D66EE;
+        text-align: left;
+    }
+
+    .blockAboutTechnologies{
+        position: relative;
+    }
+
+    .textAboutTechnologies{
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 34px;
+        position: relative;
+        left:108px;
+        top:80px;
+    }
+
+    .AboutTechnologies_header{
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 32px;
+    }
+
+    .AboutTechnologies_header h1{
+        color: #101828;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Inter, serif;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 144%;
+        letter-spacing: 0.326px;
+        width:600px;
+    }
+
+    .AboutTechnologies_header p{
+        color: #101828;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: SF Pro Text, serif;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: -0.24px;
+    }
+
+    .technologies_list_text_group{
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 32px;
+    }
+
+    .technologies_list_text{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .technologies_list_text h3{
+        color: #101828;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: SF Pro Text Semibold, serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px;
+        letter-spacing: 0.38px;
+    }
+
+    .technologies_list_text p{
+        color: #344054;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: SF Pro Text, serif;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: -0.408px;
+        width: 496px;
+    }
+
+    .listOfTechnologies{
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        color: #1D2939;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: SF Pro Display, serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0.38px;
+        left:128px;
+        top:80px;
+        position: relative;
+    }
+    .technology{
+        display: flex;
+        padding: 12px 0;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .blockAboutIndustries{
+        position: relative;
+        height: 500px;
+        color:#F2F4F7;
+    }
+
+    .industries_header{
+        height: 104px;
+        width: 600px;
+        top:80px;
+        left:108px;
+        position: relative;
+    }
+
+    .listOfIndustries{
+        display: inline-flex;
+        align-items: flex-start;
+        gap: 25px;
+        top:108px;
+        left:108px;
+        position: relative;
+    }
+
+    .industry_column_desktop{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        position: relative;
+    }
+
+    .industry{
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        position: relative;
+    }
+
+    .industry a{
+        color: #101828;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: SF Pro Text, serif;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 22px;
+        letter-spacing: -0.408px;
+        width: 331px;
+    }
+
+    .industry img{
+        display: flex;
+        padding: 10px;
+        align-items: flex-start;
+        gap: 10px;
+        border-radius: 100px;
+        background: #FFF;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+    }
+
+    .aboutProjects{
+        position: relative;
+    }
+
+    .projectExample{
+        position: relative;
+    }
+
+    .projectDiscuss{
+        position: relative;
+    }
+
+    .developmentStage{
+        position: relative;
+    }
+
+    .footer{
+        position: relative;
+        display: inline-flex;
+        padding: 24px;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        border-radius: 12px;
+        background: #101828;
+        box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.08), 0 0 2px 0 rgba(0, 0, 0, 0.08);
+        bottom: 48px;
+        left: 108px;
+        width:1224px;
+        height: 222px;
+    }
+
+    .footer p{
+        color: #FFF;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: SF Pro Text Semibold, serif;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 22px;
+        letter-spacing: -0.408px;
+    }
+
+    .footer h1{
+        width: 217px;
+        height: 24px;
+        color: #FFF;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Inter, serif;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 18px;
+        letter-spacing: -0.154px;
+    }
+
+    .contacts_footer{
+        display: flex;
+        width: 100%;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .contact_footer{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .contact_footer h5{
+        color: #98A2B3;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: SF Pro Text, serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 18px;
+        letter-spacing: -0.154px;
+    }
+
+    footer .contactWithIcon{
+        color: #98A2B3;
+    }
+
+    .footer_end{
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .footer_end p{
+        font-family: SF Pro Text, serif;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px;
+        letter-spacing: -0.078px;
+    }
+
+    footer *{
+        margin: 0 0 0 0;
+    }
 }
 
-.topHeaderBlock{
-    top: 24px;
-    left: 108px;
-    box-sizing: border-box;
-    border-radius: 12px;
-    background: #FFF;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
-    display: inline-flex;
-    padding: 16px 24px;
-    align-items: center;
-    gap: 80px;
-    position: fixed;
-    z-index: 100;
+@media screen and (min-device-width: 768px) and (max-device-width: 1439px) {
+
+    .topHeaderBlock{
+        display: flex;
+        width: 100%;
+        height: 90px;
+        top:16px;
+        padding: 25px 32px;
+        justify-content: space-between;
+        align-items: center;
+        flex-shrink: 0;
+        border-radius: 12px;
+        background: #FFF;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+        position: fixed;
+        z-index: 100;
+    }
+
+    .headerName{
+        color: #2D66EE;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Inter, serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 18px;
+        letter-spacing: -0.154px;
+        width: 120px;
+        height: 24px;
+        flex-shrink: 0;
+    }
+
+    .mobile_menu{
+        width: 59px;
+        height: 40px;
+        flex-shrink: 0;
+    }
+
+    .headerNavigation, .header_phones{
+        display: none;
+    }
+
+    .contactWithIcon{
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .contactWithIcon a{
+        color: #2D66EE;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: SF Pro Text, serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 18px;
+        letter-spacing: -0.154px;
+    }
+
+    .headerInfo{
+        position: relative;
+        height: 900px;
+        width: 100%;
+        flex-shrink: 0;
+        background: #F2F4F7;
+        z-index: 1;
+        overflow: hidden;
+    }
+
+    .commentImage{
+        position:absolute;
+        width: 138px;
+        height: 300px;
+        transform: rotate(-12deg);
+        border-radius: 24px;
+        flex-shrink: 0;
+    }
+
+    .image_1{
+        left: 520px;
+        top: 0;
+    }
+
+    .image_2{
+        left: 670px;
+        top: -45px;
+    }
+
+    .image_3{
+        left: 745px;
+        top: 262px;
+    }
+
+    .image_4{
+        left: 650px;
+        top: 625px;
+    }
+
+    .image_5{
+        left: 810px;
+        top: 590px;
+    }
+
+    .commentImageMain{
+        position:absolute;
+        width: 147px;
+        height: 317px;
+        transform: rotate(-12deg);
+        flex-shrink: 0;
+        border-radius: 24px;
+        box-shadow: 0 0 96px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.16);
+        left: 590px;
+        top: 300px;
+    }
+
+    .blockAboutTechnologies{
+        margin-top:0;
+        z-index: 2;
+        background: #FFFFFF;
+        width: 100%;
+        height: 500px;
+    }
+
+    .blockAboutIndustries{
+        margin-top:0;
+        z-index: 2;
+        background: #F2F4F7;
+    }
+
+    .mainInfoCompany{
+        top: 160px;
+        left: 32px;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        width: 383px;
+        z-index: 1;
+        position: relative;
+    }
+
+    .mainInfoCompany_header{
+        color: #101828;
+        margin: 0 0 0 0;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Inter, serif;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 144%;
+        letter-spacing: 0.326px;
+    }
+
+    span{
+        color: #306FF5;
+    }
+
+    .mainInfoCompany p{
+        margin: 0 0 0 0;
+        color: #101828;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: SF Pro Text, serif;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: -0.24px;
+    }
+
+    .contactWithCompany{
+        top:444px;
+        left: 32px;
+        display: flex;
+        padding: 32px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 32px;
+        border-radius: 12px;
+        background: #FFF;
+        box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.16), 0 0 2px 0 rgba(0, 0, 0, 0.08);
+        position: absolute;
+        z-index: 1;
+        width: 382px;
+    }
+    .contactWithCompany h2{
+        width: 295px;
+        color: #101828;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Inter, serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 24px;
+        letter-spacing: 0.38px;
+    }
+
+    .clientContacts{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+    }
+    .clientContacts form{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    .clientContacts label{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        color: #667085;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: SF Pro Text, serif;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 16px;
+        letter-spacing: -0.078px;
+    }
+
+    .clientContacts input{
+        color: #101828;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: SF Pro Text, serif;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: -0.408px;
+        outline: 0;
+    }
+
+    .clientContacts button{
+        display: flex;
+        padding: 11px 24px;
+        align-items: flex-start;
+        gap: 8px;
+        color: #FFF;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: SF Pro Text Semibold, serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 18px;
+        letter-spacing: -0.154px;
+        border-radius: 8px;
+        border-width: 0;
+        border-color: #2D66EE;
+        background: #2D66EE;
+        text-align: left;
+    }
+
+    .blockAboutTechnologies{
+        position: relative;
+    }
+
+    .textAboutTechnologies{
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 34px;
+        position: relative;
+        left:32px;
+        top:32px;
+    }
+
+    .AboutTechnologies_header{
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 32px;
+    }
+
+    .AboutTechnologies_header h1{
+        color: #101828;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Inter, serif;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 144%;
+        letter-spacing: 0.326px;
+    }
+
+    .AboutTechnologies_header p{
+        color: #101828;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: SF Pro Text, serif;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: -0.24px;
+    }
+
+    .technologies_list_text_group{
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 32px;
+    }
+
+    .technologies_list_text{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .technologies_list_text h3{
+        color: #101828;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: SF Pro Text Semibold, serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px;
+        letter-spacing: 0.38px;
+    }
+
+    .technologies_list_text p{
+        color: #344054;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: SF Pro Text, serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: -0.408px;
+        width: 277px;
+    }
+
+    .listOfTechnologies{
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        color: #1D2939;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: SF Pro Display, serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0.38px;
+        top:156px;
+        position: relative;
+    }
+    .technology{
+        display: flex;
+        padding: 12px 0;
+        align-items: center;
+        gap: 12px;
+        position: relative;
+    }
+
+    .blockAboutIndustries{
+        position: relative;
+        height: 700px;
+        color:#F2F4F7;
+        top:45px;
+    }
+
+    .industries_header{
+        height: 112px;
+        width: 380px;
+        top:45px;
+        left:32px;
+        position: relative;
+        display: inline-flex;
+        padding: 16px 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .listOfIndustries{
+        display: inline-flex;
+        align-items: flex-start;
+        gap: 25px;
+        top:48px;
+        left:32px;
+        position: relative;
+    }
+
+    .industry_column_desktop{
+        display: none;
+    }
+
+    .industry_column_mobile{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        position: relative;
+    }
+
+    .industry{
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        position: relative;
+    }
+
+    .industry a{
+        color: #101828;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: SF Pro Text, serif;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 22px;
+        letter-spacing: -0.408px;
+        width: 220px;
+    }
+
+    .industry img{
+        display: flex;
+        padding: 10px;
+        align-items: flex-start;
+        gap: 10px;
+        border-radius: 100px;
+        background: #FFF;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+    }
+
+    .aboutProjects{
+        position: relative;
+    }
+
+    .projectExample{
+        position: relative;
+    }
+
+    .projectDiscuss{
+        position: relative;
+    }
+
+    .developmentStage{
+        position: relative;
+    }
+
+    .footer{
+        position: relative;
+        display: inline-flex;
+        padding: 24px;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        border-radius: 12px;
+        background: #101828;
+        box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.08), 0 0 2px 0 rgba(0, 0, 0, 0.08);
+        bottom: 48px;
+        width:100%;
+        height: 222px;
+    }
+
+    .footer p{
+        color: #FFF;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: SF Pro Text Semibold, serif;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 22px;
+        letter-spacing: -0.408px;
+    }
+
+    .footer h1{
+        width: 217px;
+        height: 24px;
+        color: #FFF;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Inter, serif;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 18px;
+        letter-spacing: -0.154px;
+    }
+
+    .contacts_footer{
+        display: flex;
+        width: 100%;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .contact_footer{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .contact_footer h5{
+        color: #98A2B3;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: SF Pro Text, serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 18px;
+        letter-spacing: -0.154px;
+    }
+
+    footer .contactWithIcon{
+        color: #98A2B3;
+    }
+
+    .footer_end{
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .footer_end p{
+        font-family: SF Pro Text, serif;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px;
+        letter-spacing: -0.078px;
+    }
 }
 
-.headerName{
-    color: #2D66EE;
-    font-feature-settings: 'clig' off, 'liga' off;
-    font-family: Inter;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 18px;
-    letter-spacing: -0.154px;
-}
+@media screen and (min-device-width: 0) and (max-device-width: 767px) {
 
-.topHeaderBlock{
-    font-feature-settings: 'clig' off, 'liga' off;
-    font-family: SF Pro Text;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 18px;
-    letter-spacing: -0.154px;
-}
+    .topHeaderBlock{
+        display: flex;
+        width: 100%;
+        height: 90px;
+        top:16px;
+        padding: 25px 32px;
+        justify-content: space-between;
+        align-items: center;
+        flex-shrink: 0;
+        border-radius: 12px;
+        background: #FFF;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+        position: fixed;
+        z-index: 100;
+    }
 
-.headerNavigation{
-    display: flex;
-    align-items: flex-start;
-    gap: 24px;
-}
+    .headerName{
+        color: #2D66EE;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Inter, serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 18px;
+        letter-spacing: -0.154px;
+        width: 120px;
+        height: 24px;
+        flex-shrink: 0;
+    }
 
-.headerContactsBlock{
-    display: flex;
-    align-items: flex-start;
-    gap: 32px;
-}
+    .mobile_menu{
+        width: 59px;
+        height: 40px;
+        flex-shrink: 0;
+    }
 
-.contactWithIcon{
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
+    .headerNavigation, .header_phones{
+        display: none;
+    }
 
-.headerContacts{
-    display: flex;
-    align-items: flex-start;
-    gap: 16px;
-}
-.headerNavigation a {
-    color: #101828;
-}
+    .contactWithIcon{
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
 
-.headerContacts a{
-    color: #2D66EE;
-}
+    .contactWithIcon a{
+        color: #2D66EE;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: SF Pro Text, serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 18px;
+        letter-spacing: -0.154px;
+    }
 
-.headerInfo{
-    position: relative;
-    height: 900px;
-    width: 1440px;
-    flex-shrink: 0;
-    background: #F2F4F7;
-    z-index: 1;
-    overflow: hidden;
-}
+    .headerInfo{
+        position: relative;
+        height: 900px;
+        width: 100%;
+        flex-shrink: 0;
+        background: #F2F4F7;
+        z-index: 1;
+        overflow: hidden;
+    }
 
-.commentImage{
-    position:absolute;
-    width: 292px;
-    height: 632px;
-    transform: rotate(-12deg);
-    border-radius: 24px;
-}
+    .commentImage{
+        position:absolute;
+        width: 138px;
+        height: 300px;
+        transform: rotate(-12deg);
+        border-radius: 24px;
+        flex-shrink: 0;
+    }
 
-.commentImageMain{
-    position:absolute;
-    width: 310px;
-    height: 672px;
-    transform: rotate(-12deg);
-    flex-shrink: 0;
-    border-radius: 24px;
-    box-shadow: 0px 0px 96px 0px rgba(0, 0, 0, 0.24), 0px 0px 2px 0px rgba(0, 0, 0, 0.16);
-}
-.blockAboutTechnologies{
-    margin-top:0;
-    z-index: 2;
-    background: #FFFFFF;
-    width: 100%;
-    height: 500px;
-}
+    .image_1{
+        left: 520px;
+        top: 0;
+    }
 
-.blockAboutIndustries{
-    margin-top:0;
-    z-index: 2;
-    background: #F2F4F7;
-}
+    .image_2{
+        left: 670px;
+        top: -45px;
+    }
 
-.mainInfoCompany{
-    top: 160px;
-    left: 108px;
-    display: inline-flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 24px;
-    width: 600px;
-    z-index: 1;
-    position: relative;
-}
+    .image_3{
+        left: 745px;
+        top: 262px;
+    }
 
-.mainInfoCompany_header{
-    color: #101828;
-    margin: 0 0 0 0;
-    font-feature-settings: 'clig' off, 'liga' off;
-    font-family: Inter;
-    font-size: 36px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 144%;
-    letter-spacing: 0.326px;
-}
+    .image_4{
+        left: 650px;
+        top: 625px;
+    }
 
-span{
-    color: #306FF5;
-}
+    .image_5{
+        left: 810px;
+        top: 590px;
+    }
 
-.mainInfoCompany p{
-    margin: 0 0 0 0;
-    color: #101828;
-    font-feature-settings: 'clig' off, 'liga' off;
-    font-family: SF Pro Text;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 20px;
-    letter-spacing: -0.24px;
-}
+    .commentImageMain{
+        position:absolute;
+        width: 147px;
+        height: 317px;
+        transform: rotate(-12deg);
+        flex-shrink: 0;
+        border-radius: 24px;
+        box-shadow: 0 0 96px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.16);
+        left: 590px;
+        top: 300px;
+    }
 
-.contactWithCompany{
-    top:444px;
-    left:108px;
-    display: inline-flex;
-    padding: 24px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 32px;
-    border-radius: 12px;
-    background: #FFF;
-    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.16), 0 0 2px 0 rgba(0, 0, 0, 0.08);
-    position: absolute;
-    z-index: 1;
-    width: 676px;
-    height: 186px;
-}
-.contactWithCompany h2{
-    margin: 0 0 0 0;
-    width: 600px;
-    color: #101828;
-    font-feature-settings: 'clig' off, 'liga' off;
-    font-family: Inter;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 24px;
-    letter-spacing: 0.38px;
-}
+    .blockAboutTechnologies{
+        margin-top:0;
+        z-index: 2;
+        background: #FFFFFF;
+        width: 100%;
+        height: 500px;
+    }
 
-.clientContacts{
-    display: flex;
-    align-items: center;
-    gap: 24px;
-}
-.clientContacts form{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-}
-.clientContacts label{
-    color: #667085;
-    font-feature-settings: 'clig' off, 'liga' off;
-    font-family: SF Pro Text;
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 16px;
-    letter-spacing: -0.078px;
-}
+    .blockAboutIndustries{
+        margin-top:0;
+        z-index: 2;
+        background: #F2F4F7;
+    }
 
-.clientContacts input{
-    color: #101828;
-    font-feature-settings: 'clig' off, 'liga' off;
-    font-family: SF Pro Text;
-    font-size: 17px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 22px;
-    letter-spacing: -0.408px;
-    outline: 0;
-}
+    .mainInfoCompany{
+        top: 160px;
+        left: 32px;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        width: 383px;
+        z-index: 1;
+        position: relative;
+    }
 
-.clientContacts button{
-    display: flex;
-    padding: 11px 24px;
-    align-items: flex-start;
-    gap: 8px;
-    color: #FFF;
-    font-feature-settings: 'clig' off, 'liga' off;
-    font-family: SF Pro Text Semibold;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 18px;
-    letter-spacing: -0.154px;
-    border-radius: 8px;
-    border-width: 0;
-    border-color: #2D66EE;
-    background: #2D66EE;
-    text-align: left;
-}
+    .mainInfoCompany_header{
+        color: #101828;
+        margin: 0 0 0 0;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Inter, serif;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 144%;
+        letter-spacing: 0.326px;
+    }
 
-.blockAboutTechnologies{
-    position: relative;
-}
+    span{
+        color: #306FF5;
+    }
 
-.textAboutTechnologies{
-    display: inline-flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 34px;
-    position: relative;
-    left:108px;
-    top:80px;
-}
+    .mainInfoCompany p{
+        margin: 0 0 0 0;
+        color: #101828;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: SF Pro Text, serif;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: -0.24px;
+    }
 
-.AboutTechnologies_header{
-    display: inline-flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 32px;
-}
+    .contactWithCompany{
+        top:444px;
+        left: 32px;
+        display: flex;
+        padding: 32px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 32px;
+        border-radius: 12px;
+        background: #FFF;
+        box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.16), 0 0 2px 0 rgba(0, 0, 0, 0.08);
+        position: absolute;
+        z-index: 1;
+        width: 382px;
+    }
+    .contactWithCompany h2{
+        width: 295px;
+        color: #101828;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Inter, serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 24px;
+        letter-spacing: 0.38px;
+    }
 
-.AboutTechnologies_header h1{
-    color: #101828;
-    font-feature-settings: 'clig' off, 'liga' off;
-    font-family: Inter;
-    font-size: 36px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 144%;
-    letter-spacing: 0.326px;
-    width:600px;
-}
+    .clientContacts{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+    }
+    .clientContacts form{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    .clientContacts label{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        color: #667085;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: SF Pro Text, serif;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 16px;
+        letter-spacing: -0.078px;
+    }
 
-.AboutTechnologies_header p{
-    color: #101828;
-    font-feature-settings: 'clig' off, 'liga' off;
-    font-family: SF Pro Text;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 20px;
-    letter-spacing: -0.24px;
-}
+    .clientContacts input{
+        color: #101828;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: SF Pro Text, serif;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: -0.408px;
+        outline: 0;
+    }
 
-.technologies_list_text_group{
-    display: inline-flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 32px;
-}
+    .clientContacts button{
+        display: flex;
+        padding: 11px 24px;
+        align-items: flex-start;
+        gap: 8px;
+        color: #FFF;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: SF Pro Text Semibold, serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 18px;
+        letter-spacing: -0.154px;
+        border-radius: 8px;
+        border-width: 0;
+        border-color: #2D66EE;
+        background: #2D66EE;
+        text-align: left;
+    }
 
-.technologies_list_text{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-}
+    .blockAboutTechnologies{
+        position: relative;
+    }
 
-.technologies_list_text h3{
-    color: #101828;
-    font-feature-settings: 'clig' off, 'liga' off;
-    font-family: SF Pro Text Semibold;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 24px;
-    letter-spacing: 0.38px;
-}
+    .textAboutTechnologies{
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 34px;
+        position: relative;
+        left:32px;
+        top:32px;
+    }
 
-.technologies_list_text p{
-    color: #344054;
-    font-feature-settings: 'clig' off, 'liga' off;
-    font-family: SF Pro Text;
-    font-size: 17px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 22px;
-    letter-spacing: -0.408px;
-    width: 496px;
-}
+    .AboutTechnologies_header{
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 32px;
+    }
 
-.listOfTechnologies{
-    display: inline-flex;
-    flex-direction: column;
-    align-items: flex-start;
-    color: #1D2939;
-    font-feature-settings: 'clig' off, 'liga' off;
-    font-family: SF Pro Display;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0.38px;
-    left:128px;
-    top:80px;
-    position: relative;
-}
-.technology{
-    display: flex;
-    padding: 12px 0;
-    align-items: center;
-    gap: 12px;
-}
+    .AboutTechnologies_header h1{
+        color: #101828;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Inter, serif;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 144%;
+        letter-spacing: 0.326px;
+    }
 
-.blockAboutIndustries{
-    position: relative;
-    height: 500px;
-    color:#F2F4F7;
-}
+    .AboutTechnologies_header p{
+        color: #101828;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: SF Pro Text, serif;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: -0.24px;
+    }
 
-.industries_header{
-    height: 104px;
-    width: 600px;
-    top:80px;
-    left:108px;
-    position: relative;
-}
+    .technologies_list_text_group{
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 32px;
+    }
 
-.listOfIndustries{
-    display: inline-flex;
-    align-items: flex-start;
-    gap: 25px;
-    top:108px;
-    left:108px;
-    position: relative;
-}
+    .technologies_list_text{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
 
-.industry_column{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
-    position: relative;
-}
-.industry{
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    position: relative;
-}
+    .technologies_list_text h3{
+        color: #101828;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: SF Pro Text Semibold, serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px;
+        letter-spacing: 0.38px;
+    }
 
-.industry a{
-    color: #101828;
-    font-feature-settings: 'clig' off, 'liga' off;
-    font-family: SF Pro Text;
-    font-size: 17px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 22px;
-    letter-spacing: -0.408px;
-    width: 331px;
-}
+    .technologies_list_text p{
+        color: #344054;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: SF Pro Text, serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: -0.408px;
+        width: 277px;
+    }
 
-.industry img{
-    display: flex;
-    padding: 10px;
-    align-items: flex-start;
-    gap: 10px;
-    border-radius: 100px;
-    background: #FFF;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
-}
+    .listOfTechnologies{
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        color: #1D2939;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: SF Pro Display, serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0.38px;
+        top:156px;
+        position: relative;
+    }
+    .technology{
+        display: flex;
+        padding: 12px 0;
+        align-items: center;
+        gap: 12px;
+        position: relative;
+    }
 
-.aboutProjects{
-    position: relative;
-    top: 120px;
-    left:108px;
-}
+    .blockAboutIndustries{
+        position: relative;
+        height: 700px;
+        color:#F2F4F7;
+        top:45px;
+    }
 
-.projectExample{
-    position: relative;
-    left:108px;
-}
+    .industries_header{
+        height: 112px;
+        width: 380px;
+        top:45px;
+        left:32px;
+        position: relative;
+        display: inline-flex;
+        padding: 16px 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
 
-.projectDiscuss{
-    position: relative;
-    left:108px;
-}
+    .listOfIndustries{
+        display: inline-flex;
+        align-items: flex-start;
+        gap: 25px;
+        top:48px;
+        left:32px;
+        position: relative;
+    }
 
-.developmentStage{
-    position: relative;
-    left:108px;
-}
+    .industry_column_desktop{
+        display: none;
+    }
 
-.footer{
-    position: relative;
-    display: inline-flex;
-    padding: 24px;
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
-    border-radius: 12px;
-    background: #101828;
-    box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.08), 0 0 2px 0 rgba(0, 0, 0, 0.08);
-    bottom: 48px;
-    left: 108px;
-    width:1224px;
-    height: 222px;
-}
+    .industry_column_mobile{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        position: relative;
+    }
 
-.footer p{
-    color: #FFF;
-    font-feature-settings: 'clig' off, 'liga' off;
-    font-family: SF Pro Text Semibold;
-    font-size: 17px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 22px;
-    letter-spacing: -0.408px;
-}
+    .industry{
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        position: relative;
+    }
 
-.footer h1{
-    width: 217px;
-    height: 24px;
-    color: #FFF;
-    font-feature-settings: 'clig' off, 'liga' off;
-    font-family: Inter;
-    font-size: 36px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 18px;
-    letter-spacing: -0.154px;
-}
+    .industry a{
+        color: #101828;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: SF Pro Text, serif;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 22px;
+        letter-spacing: -0.408px;
+        width: 220px;
+    }
 
-.contacts_footer{
-    display: flex;
-    width: 100%;
-    align-items: flex-start;
-    justify-content: space-between;
-}
+    .industry img{
+        display: flex;
+        padding: 10px;
+        align-items: flex-start;
+        gap: 10px;
+        border-radius: 100px;
+        background: #FFF;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+    }
 
-.contact_footer{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-}
+    .aboutProjects{
+        position: relative;
+    }
 
-.contact_footer h5{
-    color: #98A2B3;
-    font-feature-settings: 'clig' off, 'liga' off;
-    font-family: SF Pro Text;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 18px;
-    letter-spacing: -0.154px;
-}
+    .projectExample{
+        position: relative;
+    }
 
-footer .contactWithIcon{
-    color: #98A2B3;
-}
+    .projectDiscuss{
+        position: relative;
+    }
 
-.footer_end{
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
+    .developmentStage{
+        position: relative;
+    }
 
-.footer_end p{
-    font-family: SF Pro Text;
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 16px;
-    letter-spacing: -0.078px;
-}
+    .footer{
+        position: relative;
+        display: inline-flex;
+        padding: 24px;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        border-radius: 12px;
+        background: #101828;
+        box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.08), 0 0 2px 0 rgba(0, 0, 0, 0.08);
+        bottom: 48px;
+        width:100%;
+        height: 222px;
+    }
 
-footer *{
-    margin: 0 0 0 0;
+    .footer p{
+        color: #FFF;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: SF Pro Text Semibold, serif;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 22px;
+        letter-spacing: -0.408px;
+    }
+
+    .footer h1{
+        width: 217px;
+        height: 24px;
+        color: #FFF;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Inter, serif;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 18px;
+        letter-spacing: -0.154px;
+    }
+
+    .contacts_footer{
+        display: flex;
+        width: 100%;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .contact_footer{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .contact_footer h5{
+        color: #98A2B3;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: SF Pro Text, serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 18px;
+        letter-spacing: -0.154px;
+    }
+
+    footer .contactWithIcon{
+        color: #98A2B3;
+    }
+
+    .footer_end{
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .footer_end p{
+        font-family: SF Pro Text, serif;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px;
+        letter-spacing: -0.078px;
+    }
 }
 
 
