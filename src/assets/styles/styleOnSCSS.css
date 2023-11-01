@@ -554,44 +554,28 @@ p, h1, h2, h3, h4, h5 {
     z-index: 1;
     overflow: hidden;
   }
-  .commentImage {
+  .commentImage_left {
     position: absolute;
-    width: 138px;
-    height: 300px;
-    transform: rotate(-12deg);
-    border-radius: 24px;
-    flex-shrink: 0;
+    top: -600px;
+    left: 1280px;
+    width: 250px;
+    height: 10000px;
+    background-size: contain;
+    background-image: url("../img/Animations_comments/column-left.webp");
+    background-repeat: repeat-y;
+    animation: movement_left 10s infinite alternate linear;
+    animation-iteration-count: infinite;
   }
-  .image_1 {
-    left: 520px;
-    top: 0;
-  }
-  .image_2 {
-    left: 670px;
-    top: -45px;
-  }
-  .image_3 {
-    left: 745px;
-    top: 262px;
-  }
-  .image_4 {
-    left: 650px;
-    top: 625px;
-  }
-  .image_5 {
-    left: 810px;
-    top: 590px;
-  }
-  .commentImageMain {
+  .commentImage_right {
     position: absolute;
-    width: 147px;
-    height: 317px;
-    transform: rotate(-12deg);
-    flex-shrink: 0;
-    border-radius: 24px;
-    box-shadow: 0 0 96px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.16);
-    left: 590px;
-    top: 300px;
+    top: -1650px;
+    left: 1290px;
+    width: 140px;
+    height: 10000px;
+    background-size: contain;
+    background-image: url("../img/Animations_comments/column-right.webp");
+    background-repeat: repeat-y;
+    animation: movement_right 10s infinite alternate linear;
   }
   .blockAboutTechnologies {
     margin-top: 0;
@@ -1033,44 +1017,28 @@ p, h1, h2, h3, h4, h5 {
     z-index: 1;
     overflow: hidden;
   }
-  .commentImage {
+  .commentImage_left {
     position: absolute;
-    width: 146.55px;
-    height: 288.12px;
-    transform: rotate(-12deg);
-    border-radius: 24px;
-    flex-shrink: 0;
+    top: -500px;
+    left: 260px;
+    width: 250px;
+    height: 4000px;
+    background-size: contain;
+    background-image: url("../img/Animations_comments/column-left.webp");
+    background-repeat: repeat-y;
+    animation: movement_left 10s infinite alternate linear;
+    animation-iteration-count: infinite;
   }
-  .image_1 {
-    left: 60px;
-    top: 400px;
-  }
-  .image_2 {
-    left: 220px;
-    top: 370px;
-  }
-  .image_3 {
-    left: 280px;
-    top: 670px;
-  }
-  .image_4 {
-    left: 190px;
-    top: 980px;
-  }
-  .image_5 {
-    left: 350px;
-    top: 970px;
-  }
-  .commentImageMain {
+  .commentImage_right {
     position: absolute;
-    width: 147px;
-    height: 317px;
-    transform: rotate(-12deg);
-    flex-shrink: 0;
-    border-radius: 24px;
-    box-shadow: 0 0 96px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.16);
-    left: 130px;
-    top: 700px;
+    top: -1000px;
+    left: 400px;
+    width: 150px;
+    height: 4000px;
+    background-size: contain;
+    background-image: url("../img/Animations_comments/column-right.webp");
+    background-repeat: repeat-y;
+    animation: movement_right 10s infinite alternate linear;
   }
   .blockAboutTechnologies {
     margin-top: 0;
