@@ -586,6 +586,13 @@ p, h1, h2, h3, h4, h5{
         flex-shrink: 0;
     }
 
+    .mobile_menu_with_text{
+        gap: 233px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
     .headerNavigation, .header_phones{
         display: none;
     }
