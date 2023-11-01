@@ -110,8 +110,8 @@ p, h1, h2, h3, h4, h5 {
   }
   .commentImage_right {
     position: absolute;
-    top: -650px;
-    left: 2000px;
+    top: -1650px;
+    left: 1800px;
     width: 300px;
     height: 10000px;
     background-image: url("../img/Animations_comments/column-right.webp");
@@ -520,6 +520,12 @@ p, h1, h2, h3, h4, h5 {
     width: 59px;
     height: 40px;
     flex-shrink: 0;
+  }
+  .mobile_menu_with_text {
+    gap: 233px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
   }
   .headerNavigation, .header_phones {
     display: none;
