@@ -189,7 +189,6 @@ p, h1, h2, h3, h4, h5{
   }
 
   .contactWithCompany{
-    top:444px;
     left:108px;
     display: inline-flex;
     padding: 24px;
@@ -442,18 +441,570 @@ p, h1, h2, h3, h4, h5{
 
   .aboutProjects{
     position: relative;
+    background: #F2F4F7;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  .listOfProjects{
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .project{
+    display: flex;
+    padding: 16px;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .project a{
+    color: #101828;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: SF Pro Text, serif;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: -0.408px;
+  }
+
+  .projects_header{
+    left: 108px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    width: 600px;
+    z-index: 1;
+    position: relative;
+  }
+
+  .projects_header h1{
+    color: #101828;
+    margin: 0 0 0 0;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Inter, serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 144%;
+    letter-spacing: 0.326px;
+  }
+
+  .projects_header p{
+    margin: 0 0 0 0;
+    color: #101828;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: SF Pro Text, serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.24px;
+  }
+
+  .projectList_button{
+    position: relative;
+    display: flex;
+    padding-right: 0;
+    align-items: center;
+    gap: 160px;
+    left: 108px;
+  }
+
+  .moreProjectsButton button{
+    display: flex;
+    padding: 11px 24px;
+    align-items: flex-start;
+    gap: 10px;
+    color: #FFFFFF;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: SF Pro Text, serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: -0.154px;
+    border-radius: 8px;
+    background: #2D66EE;
   }
 
   .projectExample{
     position: relative;
+    left: 108px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+  }
+
+  .project_example_header h1{
+    color: #101828;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Inter, serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 144%;
+    letter-spacing: 0.326px;
+  }
+
+  .project_example_text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    color: #101828;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: SF Pro Text, serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.24px;
+  }
+
+  .project_example_maintext{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  .project_example_maintext p{
+    width: 600px;
+    color: #101828;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: SF Pro Text, serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.24px;
+  }
+
+  .project_tags{
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+  }
+
+  .example_info{
+    display: flex;
+    align-items: flex-start;
+    gap: 48px;
+  }
+
+  .example_info_block{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .example_info_block p{
+    color: #101828;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Inter, serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 144%;
+    letter-spacing: 0.326px;
+  }
+
+  .example_info_block a{
+    color: #667085;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: SF Pro Text, serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: -0.078px;
+  }
+
+  .install_block{
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .install_block img{
+    width: 148px;
+    height: 40px;
   }
 
   .projectDiscuss{
     position: relative;
+    width: 100%;
+    height: 350px;
+    background-color: #2D66EE;
+  }
+
+  .projectDiscuss_noise{
+    opacity: 0.3;
+    width: 100%;
+    height: 350px;
+    mix-blend-mode: overlay;
+    color: lightgray 0 0 / 100px 100px repeat;
+    position: absolute;
+  }
+
+  .discuss_background{
+    height: 350px;
+    width: 1440px;
+    z-index: 1;
+  }
+
+  .discussText{
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    left: 108px;
+    top: 80px;
+    z-index: 3;
+  }
+
+  .discussText h1{
+    color: #FFF;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Inter, serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 144%;
+    letter-spacing: 0.326px;
+    width: 600px;
+  }
+
+  .discussText p{
+    color: #FFF;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: SF Pro Text, serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    width: 600px;
+  }
+
+  .discuss_form{
+    position: relative;
+    left: 24px;
+    top: 80px;
+    display: inline-flex;
+    padding: 24px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 24px;
+    border-radius: 12px;
+    background: #FFF;
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.16), 0 0 2px 0 rgba(0, 0, 0, 0.08);
+  }
+
+  .discuss_contacts{
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .discuss_contact{
+    display: flex;
+    padding: 12px 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .developmentStagesBlock{
+    position: relative;
+    height: 810px;
+  }
+
+  .developmentStagesBlock h1{
+    width: 600px;
+    color: #101828;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Inter, serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 144%;
+    letter-spacing: 0.326px;
+    position: relative;
+    top: 80px;
+    left: 108px;
+  }
+
+  .developmentStages_list{
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 440px;
+    position: relative;
+    left: 108px;
+    top: 114px;
   }
 
   .developmentStage{
+    display: inline-flex;
+    padding: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    border-radius: 12px;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.08), 0 0 2px 0 rgba(0, 0, 0, 0.08);
+    background-repeat: no-repeat;
+    background-position: right top;
+  }
+
+  .developmentStage p{
+    width: 334px;
+    color: var(--gray-900, #101828);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: SF Pro Text Regular, serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.24px;
+  }
+
+  .develop_icon{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .number_img{
+    position: absolute;
+    width: 86px;
+    height: 172px;
+    flex-shrink: 0;
+    fill: rgba(45, 102, 238, 0.04);
+  }
+
+  .BlockAboutTeam{
     position: relative;
+    display: inline-flex;
+    padding: 80px 108px;
+    align-items: flex-start;
+    gap: 24px;
+    background: #F2F4F7;
+    width: 100%;
+  }
+
+  .textAboutTeam{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+  }
+
+  .textAboutTeam h1{
+    width: 600px;
+    color: #101828;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Inter, serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 144%;
+    letter-spacing: 0.326px;
+  }
+
+  .textAboutTeam p{
+    color: #101828;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: SF Pro Text, serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.24px;
+    width: 600px;
+  }
+
+  .textAboutTeam h3{
+    color: #101828;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Inter, serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 144%;
+    letter-spacing: 0.326px;
+  }
+
+  .textAboutTeam a{
+    display: flex;
+    color: #667085;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: SF Pro Text, serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.24px;
+    width: 184px;
+  }
+
+  .team_numbers{
+    display: flex;
+    padding: 8px 0;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .teamVideo{
+    background-image: url("../img/team.png");
+    width: 603px;
+    height: 392px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .play_button{
+    display: inline-flex;
+    padding: 12px;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 100px;
+    background: #2D66EE;
+  }
+
+  .getBook{
+    position: relative;
+    display: inline-flex;
+    padding: 80px 108px;
+    align-items: flex-start;
+    width: 100%;
+    background-image: url("../img/84325b84f3dab86eca9938a29fe403c6.png") lightgray 0 0 / 100px 100px repeat opacity(0.3);
+    mix-blend-mode: overlay;
+    background-color: #2D66EE;
+    gap: 24px;
+  }
+
+  .getBook h1{
+    width: 600px;
+    color: #FCFCFD;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Inter, serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 144%;
+    letter-spacing: 0.326px;
+  }
+
+  .book{
+    display: flex;
+    width: 650px;
+    height: 520px;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .book_contacts{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  .book_contact{
+    display: flex;
+    padding: 16px 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .FAQBlock{
+    position: relative;
+    display: inline-flex;
+    padding: 80px 108px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  .questions{
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .questions_column{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .question{
+    display: flex;
+    padding: 12px 0;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .questions h3{
+    color: #101828;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: SF Pro Display, serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.38px;
+    width: 524px;
+  }
+
+  .questions p{
+    color: #101828;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: SF Pro Text Regular, serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.24px;
+    width: 524px;
+  }
+
+  .unlocked_question{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .unlocked_question_icon{
+    display: flex;
+    padding: 12px 0;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .unlock_icon{
+    display: flex;
+    padding: 12px;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 100px;
+    background: #FFF;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
   }
 
   .footer{

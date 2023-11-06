@@ -20,3 +20,8 @@
     font-family: "SF Pro Display";
     src: url("/static/fonts/SF-Pro-Display-Medium.otf");
 }
+
+@font-face {
+    font-family: "SF Pro Text Regular";
+    src: url("/static/fonts/SF Text/SFProText-Regular.ttf");
+}
