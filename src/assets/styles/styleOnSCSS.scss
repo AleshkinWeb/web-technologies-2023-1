@@ -213,6 +213,7 @@ p, h1, h2, h3, h4, h5{
     z-index: 1;
     width: 676px;
     height: 186px;
+    top:444px;
   }
   .contactWithCompany h2{
     margin: 0 0 0 0;
@@ -1122,6 +1123,10 @@ p, h1, h2, h3, h4, h5{
 
   footer *{
     margin: 0 0 0 0;
+  }
+
+  .mobile{
+    display: none;
   }
 }
 
@@ -2241,9 +2246,15 @@ p, h1, h2, h3, h4, h5{
     line-height: 16px;
     letter-spacing: -0.078px;
   }
+
+  .mobile{
+    display: none;
+  }
 }
 
 @media screen and (min-device-width: 0) and (max-device-width: 767px) {
+
+  $left: 17px;
 
   .topHeaderBlock{
     display: inline-flex;
@@ -2312,12 +2323,13 @@ p, h1, h2, h3, h4, h5{
 
   .headerInfo{
     position: relative;
-    height: 1300px;
+    height: 1230px;
     width: 100%;
-    flex-shrink: 0;
     background: #F2F4F7;
     z-index: 1;
     overflow: hidden;
+    display: flex;
+    padding-left: $left;
   }
 
   .commentImage_left{
@@ -2363,7 +2375,6 @@ p, h1, h2, h3, h4, h5{
 
   .mainInfoCompany{
     top: 160px;
-    left: 24px;
     display: inline-flex;
     flex-direction: column;
     align-items: flex-start;
@@ -2371,6 +2382,7 @@ p, h1, h2, h3, h4, h5{
     width: 383px;
     z-index: 1;
     position: relative;
+    height: fit-content;
   }
 
   .mainInfoCompany_header{
@@ -2402,8 +2414,6 @@ p, h1, h2, h3, h4, h5{
   }
 
   .contactWithCompany{
-    top:878px;
-    left: 24px;
     display: flex;
     padding: 32px;
     flex-direction: column;
@@ -2416,6 +2426,7 @@ p, h1, h2, h3, h4, h5{
     position: absolute;
     z-index: 1;
     width: 382px;
+    bottom: 33px;
   }
   .contactWithCompany h2{
     width: 295px;
@@ -2499,6 +2510,7 @@ p, h1, h2, h3, h4, h5{
     position: relative;
     left:17px;
     top:32px;
+    width: fit-content;
   }
 
   .AboutTechnologies_header{
@@ -2512,7 +2524,7 @@ p, h1, h2, h3, h4, h5{
     color: #101828;
     font-feature-settings: 'clig' off, 'liga' off;
     font-family: Inter, serif;
-    font-size: 36px;
+    font-size: 28px;
     font-style: normal;
     font-weight: 700;
     line-height: 144%;
@@ -2582,6 +2594,7 @@ p, h1, h2, h3, h4, h5{
     top:64px;
     left: 17px;
     position: relative;
+    width: fit-content;
   }
   .technology{
     display: flex;
@@ -2593,16 +2606,16 @@ p, h1, h2, h3, h4, h5{
 
   .blockAboutIndustries{
     position: relative;
-    height: 700px;
+    height: 650px;
     color:#F2F4F7;
     top:45px;
+    padding-left: $left;
+    padding-top: 45px;
   }
 
   .industries_header{
     height: 112px;
     width: 380px;
-    top:45px;
-    left:17px;
     position: relative;
     display: inline-flex;
     padding: 16px 0;
@@ -2614,10 +2627,7 @@ p, h1, h2, h3, h4, h5{
   .listOfIndustries{
     display: inline-flex;
     align-items: flex-start;
-    /*gap: 25px;*/
-    justify-content: space-between;
-    top:48px;
-    left:17px;
+    gap: 25px;
     position: relative;
     width: 80%;
   }
@@ -2664,19 +2674,600 @@ p, h1, h2, h3, h4, h5{
   }
 
   .aboutProjects{
+    padding-left: $left;
+    padding-top: 45px;
+    padding-bottom: 45px;
     position: relative;
+    background: #F2F4F7;
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  .listOfProjects{
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    flex-wrap: wrap;
+    height: 60px;
+    padding-right: 0;
+    width: 390px;
+  }
+
+  .project{
+    display: flex;
+    padding-bottom: 16px;
+    padding-right: 20px;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .project a{
+    color: #101828;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: SF Pro Text, serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: -0.408px;
+  }
+
+  .projects_header{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    width: 340px;
+    z-index: 1;
+    position: relative;
+  }
+
+  .projects_header h1{
+    color: #101828;
+    margin: 0 0 0 0;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Inter, serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 144%;
+    letter-spacing: 0.326px;
+  }
+
+  .projects_header p{
+    margin: 0 0 0 0;
+    color: #101828;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: SF Pro Text, serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.24px;
+  }
+
+  .moreProjectsButton{
+    display: none;
   }
 
   .projectExample{
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+  }
+
+  .project_phone{
+    background-image: url(../img/phone.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    min-width: 300px;
+    max-width: 400px;
+    height: 100%;
+    position: relative;
+  }
+
+  .project_phone img{
+    display: none;
+  }
+
+  .project_example_header h1{
+    color: #101828;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Inter, serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 144%;
+    letter-spacing: 0.326px;
+  }
+
+  .project_example_text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    color: #101828;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: SF Pro Text, serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.24px;
+  }
+
+  .project_example_maintext{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  .project_example_maintext p{
+    width: 450px;
+    color: #101828;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: SF Pro Text, serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.24px;
+  }
+
+  .project_tags{
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+  }
+
+  .example_info{
+    display: flex;
+    align-items: flex-start;
+    gap: 48px;
+  }
+
+  .example_info_block{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .example_info_block p{
+    color: #101828;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Inter, serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 144%;
+    letter-spacing: 0.326px;
+  }
+
+  .example_info_block a{
+    color: #667085;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: SF Pro Text, serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: -0.078px;
+  }
+
+  .projectExample_block{
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    position: relative;
+  }
+
+  .install_block{
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .install_block img{
+    width: 148px;
+    height: 40px;
   }
 
   .projectDiscuss{
     position: relative;
+    width: 100%;
+    height: 670px;
+    background-color: #2D66EE;
+    padding-top: 22px;
+    padding-left: $left;
+  }
+
+  .projectDiscuss_noise{
+    left: 0;
+    top: 0;
+    opacity: 0.3;
+    width: 100%;
+    height: 670px;
+    mix-blend-mode: overlay;
+    color: lightgray 0 0 / 100px 100px repeat;
+    position: absolute;
+  }
+
+  .discussText{
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    z-index: 3;
+    padding-bottom: 32px;
+  }
+
+  .discussText h1{
+    color: #FFF;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Inter, serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 144%;
+    letter-spacing: 0.326px;
+    width: 350px;
+  }
+
+  .discussText p{
+    color: #FFF;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: SF Pro Text, serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    width: 350px;
+  }
+
+  .discuss_form{
+    position: absolute;
+    display: flex;
+    padding: 36px 18px 36px 17px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    border-radius: 12px;
+    background: #FFF;
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.16), 0 0 2px 0 rgba(0, 0, 0, 0.08);
+    width: 393px;
+    height: 300px;
+    bottom: 33px;
+  }
+
+  .discuss_contacts{
+    display: flex;
+    align-items: flex-start;
+    align-self: flex-start;
+    gap: 24px;
+    flex-direction: column;
+  }
+
+  .discuss_contact{
+    display: flex;
+    padding: 12px 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .developmentStagesBlock{
+    position: relative;
+    height: 1500px;
+    padding-left: $left;
+    padding-top: 32px;
+  }
+
+  .developmentStagesBlock h1{
+    width: 309px;
+    color: #101828;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Inter, serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 144%;
+    letter-spacing: 0.326px;
+    position: relative;
+    padding-bottom: 44px;
+  }
+
+  .developmentStages_list{
+    display: inline-flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
   }
 
   .developmentStage{
+    display: inline-flex;
+    padding: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    border-radius: 12px;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.08), 0 0 2px 0 rgba(0, 0, 0, 0.08);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right top;
+    width: 400px;
+    height: 200px;
+  }
+
+  .developmentStage p{
+    width: 230px;
+    color: var(--gray-900, #101828);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: SF Pro Text Regular, serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.24px;
+  }
+
+  .develop_icon{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .development_column{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    width: fit-content;
+  }
+
+  .BlockAboutTeam{
     position: relative;
+    display: inline-flex;
+    padding: 80px $left;
+    align-items: flex-start;
+    gap: 24px;
+    background: #F2F4F7;
+    width: 100%;
+  }
+
+  .textAboutTeam{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+  }
+
+  .textAboutTeam h1{
+    width: 375px;
+    color: #101828;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Inter, serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 144%;
+    letter-spacing: 0.326px;
+  }
+
+  .textAboutTeam p{
+    color: #101828;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: SF Pro Text, serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.24px;
+    width: 375px;
+  }
+
+  .textAboutTeam h3{
+    color: #101828;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Inter, serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 144%;
+    letter-spacing: 0.326px;
+  }
+
+  .textAboutTeam a{
+    display: flex;
+    color: #667085;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: SF Pro Text, serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.24px;
+    width: 100px;
+  }
+
+  .team_numbers{
+    display: flex;
+    padding: 8px 0;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .teamVideo{
+    background-image: url("../img/team.png");
+    width: 603px;
+    height: 392px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .play_button{
+    display: inline-flex;
+    padding: 12px;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 100px;
+    background: #2D66EE;
+  }
+
+  .getBook{
+    position: relative;
+    display: inline-flex;
+    padding: 76px;
+    justify-content: center;
+    width: 100%;
+    background-image: url("../img/84325b84f3dab86eca9938a29fe403c6.png") lightgray 0 0 / 100px 100px repeat opacity(0.3);
+    mix-blend-mode: overlay;
+    background-color: #2D66EE;
+    gap: 24px;
+    height: 930px;
+  }
+
+  .getBook h1{
+    width: 455px;
+    color: #FCFCFD;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Inter, serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 144%;
+    letter-spacing: 0.326px;
+  }
+
+  .book{
+    display: flex;
+    width: 161px;
+    height: 243px;
+    position: relative;
+  }
+
+  .book img{
+    width: 160px;
+    height: 242px;
+  }
+
+  .book_contacts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .discuss_book{
+    padding: 32px;
+    width: fit-content;
+    height: fit-content;
+  }
+
+  .mobile_button{
+    align-self: flex-start;
+  }
+
+  .desktop_book_discuss{
+    display: none;
+  }
+
+  .book_contact{
+    display: flex;
+    padding: 16px 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .FAQBlock{
+    position: relative;
+    display: inline-flex;
+    padding: 80px $left;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  .questions{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .questions_column{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .question{
+    display: flex;
+    padding: 12px 0;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .questions h3{
+    color: #101828;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: SF Pro Display, serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.38px;
+    width: 344px;
+  }
+
+  .questions p{
+    color: #101828;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: SF Pro Text Regular, serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.24px;
+    width: 380px;
+  }
+
+  .unlocked_question{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .unlocked_question_icon{
+    display: flex;
+    padding: 12px 0;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .unlock_icon{
+    display: flex;
+    padding: 12px;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 100px;
+    background: #FFF;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
   }
 
   .footer{
@@ -2760,6 +3351,10 @@ p, h1, h2, h3, h4, h5{
     font-weight: 400;
     line-height: 16px;
     letter-spacing: -0.078px;
+  }
+
+  .desktop{
+    display: none;
   }
 }
 
