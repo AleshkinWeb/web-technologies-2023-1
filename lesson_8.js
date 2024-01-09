@@ -62,13 +62,41 @@ const result2 = spinWords( "This is a test" )
 console.log(result2) // This is a test
 
 //4
-
-function subtraction(numbers, prediction) {
-
+function SumCheck(nums, target) {
+    for (let i = 0; i < nums.length; i++) {
+        for (let j = i; j < nums.length; j++) {
+            if (nums[i] + nums[j] === target) {
+                return [i, j];
+            }
+        }
+    }
 }
+
+let nums = [2,7,11,15];
+let target = 9;
+console.log(SumCheck(nums, target));
 
 //5
-
-function findString(strings) {
-
+function Prefix(strings) {
+    res = "";
+    for (let i = 0; i < strings[0].length; i++) {
+        prefix = strings[0][i];
+        for (let j = i + 1; j < strings[0].length; j++) {
+            prefix += strings[0][j];
+            check = true;
+            for (let k = 0; k < strings.length; k++)
+                if (!strings[k].includes(prefix)) {
+                    check = false;
+                    break
+                }
+            if (check && prefix.length > res.length) res = prefix;
+        }
+    }
+    return res;
 }
+
+strs = ["цветок","поток","хлопок"]
+console.log(Prefix(strs))
+
+strs = ["собака","гоночная машина","машина"]
+console.log(Prefix(strs))
