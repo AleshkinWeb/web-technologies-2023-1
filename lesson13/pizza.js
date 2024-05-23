@@ -24,6 +24,8 @@ class Pizza{
 
     constructor() {
         this.toppings = [];
+        this.size = sizes[0];
+        this.pizzaType = pizzas[0];
     }
 
     addTopping(topping) {
@@ -45,14 +47,6 @@ class Pizza{
         }
         top = top.trim() + ";";
         console.log(top);
-    }
-
-    getSize() {
-        console.log("Размер пиццы: " + this.size.name)
-    }
-
-    getStuffing() {
-        console.log("Вид пиццы: " + this.pizzaType.name);
     }
 
     calculatePrice() {
@@ -87,7 +81,7 @@ class Pizza{
     calculateCalories() {
         let ccal = 0;
         for (let i=0; i < this.toppings.length; i++){
-            if(this.toppings[i].name === "Сливочная моцарелла"){
+            if(this.toppings[i].name == "Сливочная моцарелла"){
                 if(this.size.name === "Большая"){
                     ccal += 40;
                 } else if (this.size.name === "Маленькая"){
@@ -128,9 +122,8 @@ const toppings = [
 ];
 
 const sizes = [
-    
-    new PizzaAttribute("Маленький", 100, 100, null, 'size'),
-    new PizzaAttribute("Большой", 200, 200, null, 'size')
+    new PizzaAttribute("Маленькая", 100, 100, null, 'size'),
+    new PizzaAttribute("Большая", 200, 200, null, 'size'),
 ];
 
 const pizza = new Pizza();
@@ -150,16 +143,15 @@ function GeneratePizzas() {
         var button = document.createElement("button");
         button.className = "PizzaImage";
         button.style.backgroundImage = "url('" + pizzas[i].image + "')";
-        button.id = pizzas[i].image;
+        button.id = pizzas[i].name;
         button.onclick = function () {
-            PizzaChange(pizzas.find(pizza => pizza.image == button.id));
-            alert(pizza.cals);
+            PizzaChange(pizzas.find(pizza => pizza.name == this.id));
         }
         var label = document.createElement("p");
         label.textContent = pizzas[i].name;
+        label.className = "PizzaName";
         label.onclick = function () {
-            PizzaChange(pizzas.find(pizza => pizza.name == label.textContent));
-            alert(pizza.cals);
+            PizzaChange(pizzas.find(pizza => pizza.name == this.textContent));
         };
         
         container.appendChild(button);
@@ -192,7 +184,7 @@ function GeneratePizzas() {
         sizebutton.className = "Size";
         sizebutton.textContent = sizes[i].name;
         sizebutton.onclick = function () {
-            PizzaChange(sizes.find(size => size.name = button.textContent))
+            PizzaChange(sizes.find(size => size.name == this.textContent));
         }
         sizeList.appendChild(sizebutton);
         sizeCatalog.appendChild(sizeList);
@@ -214,16 +206,14 @@ function GeneratePizzas() {
         var button = document.createElement("button");
         button.className = "ToppingImage";
         button.style.backgroundImage = "url('" + toppings[i].image + "')";
-        button.id = toppings[i].image;
+        button.id = toppings[i].name;
         button.onclick = function () {
-            PizzaChange(toppings.find(topping => topping.image == button.id));
-            alert(pizza.cals);
-        }
+            PizzaChange(toppings.find(topping => topping.name == this.id));
+        };
         var label = document.createElement("p");
         label.textContent = toppings[i].name;
         label.onclick = function () {
-            PizzaChange(toppings.find(topping => topping.name == label.textContent));
-            alert(pizza.cals);
+            PizzaChange(toppings.find(topping => topping.name == this.textContent));
         };
         
         container.appendChild(button);
@@ -235,25 +225,24 @@ function GeneratePizzas() {
         calculateButton.className = "Calculate";
         calculateButton.id = "Calculate";
         calculateButton.textContent = "Добавить в корзину за\n 0₽ (0 кКал)";
-        calculateButton.onclick = function () {
-            PizzaChange(toppings.find(topping => topping.image == calculateButton.id));
-            alert(pizza.cals);
+        calculateButton.onclick = function() {
+            alert('Заказ сделан!');
         }
     
     pizzaAttributeMenu.appendChild(calculateButton);
   }
 
   function PizzaChange(attribute){
-    if (attribute.type == 'type')
-        {
-            pizza.pizzaType == attribute;
+    if (attribute.type == 'type'){
+            pizza.pizzaType = attribute;
         }
+    else if (attribute.type == 'size'){
+            pizza.size = attribute;
+    }
     else if (attribute.type == 'topping'){
         pizza.addTopping(attribute);
     } 
-    else if (attribute.type == 'size'){
-        pizza.size = attribute;
-    }
     pizza.calculateCalories();
     pizza.calculatePrice();
+    document.getElementById("Calculate").textContent = "Добавить в корзину за " + pizza.price + " ₽ (" + pizza.cals + " кКал)";;
   }

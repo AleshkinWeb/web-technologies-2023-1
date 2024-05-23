@@ -1,5 +1,4 @@
 * {
-  outline: solid red;
   position: relative;
 }
 
@@ -20,6 +19,7 @@ body {
   height: 300px;
   border: none;
   background-size: cover;
+  margin-right: 10px;
 }
 
 .ToppingImage {
@@ -27,6 +27,8 @@ body {
   height: 200px;
   border: none;
   background-size: cover;
+  background-color: white;
+  margin-right: 10px;
 }
 
 .toppingCatalog {
@@ -37,9 +39,35 @@ body {
 .toppingLabel {
   font-size: x-large;
   font-weight: bold;
+  margin-left: 10px;
 }
 
 .SizeLabel {
   font-size: xx-large; 
   font-weight: bold;
+  margin-left: 10px;
+}
+
+.PizzaAttributes{
+  background-color: darkgray;
+}
+
+.Size{
+  width: 200px;
+  height: 30px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.Topping{
+  margin-left: 10px;
+}
+
+.Calculate{
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.PizzaName{
+  text-align: center;
 }
