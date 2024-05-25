@@ -2,9 +2,10 @@ import { Catalog } from "./src/components/catalog.js"
 
 const renderPostItem = item => `
     <a  
-        href="posts/${item.id}"
+        href="post.html?id=${item.id}"
         class="post-item"
-    >
+        >
+
         <span class="post-item__title">
             ${item.title}
         </span>
@@ -12,16 +13,20 @@ const renderPostItem = item => `
         <span class="post-item__body">
             ${item.body}
         </span>
+
     </a>
 `
 
-const getPostItems = ({ limit, page }) => {
-    return fetch(`https://jsonplaceholder.typicode.com/posts?_limit=${limit}&_page=${page}`)
-        .then(async res => {
-            const total = +res.headers.get('x-total-count')
-            const items = await res.json()
-            return { items, total }
-        })
+const getPostItems = async ({ limit, page }) => {
+    try  {
+        const res = await fetch(`https://jsonplaceholder.typicode.com/posts?_limit=${limit}&_page=${page}`);        
+        const total = +res.headers.get('x-total-count')
+        const items = await res.json()
+        return { items, total }
+    }
+    catch(error) {
+        console.log("Обработка ошибки getPostItems");
+    }
 }
 
 const renderPhotoItem = item => `
@@ -40,13 +45,16 @@ const renderPhotoItem = item => `
     </a>
 `
 
-const getPhotoItems = ({ limit, page }) => {
-    return fetch(`https://jsonplaceholder.typicode.com/photos?_limit=${limit}&_page=${page}`)
-        .then(async res => {
-            const total = +res.headers.get('x-total-count')
-            const items = await res.json()
-            return { items, total }
-        })
+const getPhotoItems = async ({ limit, page }) => {
+    try {
+        const res =  await fetch(`https://jsonplaceholder.typicode.com/photos?_limit=${limit}&_page=${page}`)
+        const total = +res.headers.get('x-total-count')
+        const items = await res.json()
+        return { items, total }
+    }
+    catch(error) {
+        console.log("Обработка ошибки getPhotoItems");
+    }
 }
 
 const init = () => {
