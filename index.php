@@ -99,9 +99,6 @@ function mathOperation($arg1, $arg2, $operation){
     }
 }
 
-//Задание 5
-
-
 //Задание 6
 
 function power($val, $pow){
@@ -113,6 +110,8 @@ function power($val, $pow){
         return power($val, $pow + 1) / $val;
     }
 }
+
+//Задание 5
 
 ?>
 
