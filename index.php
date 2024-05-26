@@ -1,13 +1,47 @@
-$Title = 'Blah Blah Blah';
-$User  = 'Jon Miller';
+<?php
+date_default_timezone_set('UTC');
+$title = 'title для шестьнадцатой лабораторной';
+$h1  = 'h1 для шестьнадцатой лабораторной';
+$dateYear = date("Y");
 
-$ThemeName = "MyGreenPage";
-$Contents  = array("User", "Login_Form");
+function GetDeclensions() {
+    $dateHour = (int)date('H');
+    $dateMinutes = (int)date('m');
+    $result = (string)$dateHour;
 
-function Include($FileName) {
-    if (file_exists($FileName))
-        include $FileName;
+    if ($dateHour == 1 or $dateHour == 21 ) {
+
+        $result .= ' час ';
+
+    }else if ($dateHour >= 5 and $dateHour <= 20) {
+        
+        $result .= ' часов ';
+
+    } else {
+        
+        $result .= ' часа ';
+
+    }
+
+    $result .= (string)$dateMinutes;
+
+    if ($dateMinutes != 11 and substr(((string)$dateMinutes),-1) == "1") {
+        
+        $result .= ' минута';
+
+    } else if ((substr(((string)$dateMinutes), -1) == "2" or substr(((string)$dateMinutes), -1) == "3" or substr(((string)$dateMinutes), -1) == "4") and $dateMinutes < 12 and $dateMinutes > 14) {
+        
+        $result .= ' минуты';
+
+    } else {
+        
+        $result .= ' минут';
+
+    }
+
+    return $result;
 }
+?>
 
 <!DOCTYPE html>
   <html lang="ru">
@@ -16,12 +50,8 @@ function Include($FileName) {
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="main-header">
-      <h1 class="visually-hidden">Дневник погоды</h1>
-    </header>
-    <div class="main-content">
-      <main class="content"><?= $content; ?></main>
-    </div>
-    <footer class="main-footer">Дневник наблюдения за погодой. Все права защищены</footer>
+    <h1><?= $h1; ?></h1>
+    <p>Год: <?= $dateYear;?></p>
+    <p>Время: <?= GetDeclensions(); ?></p>
   </body>
 </html>
