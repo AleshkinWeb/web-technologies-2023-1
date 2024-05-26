@@ -79,6 +79,26 @@ function division($a, $b){
 
 //Задание 4
 
+function mathOperation($arg1, $arg2, $operation){
+    switch($operation){
+        case "Умножение":
+            return multiplication($arg1, $arg2);
+            break;
+        case "Сложение":
+            return summation($arg1, $arg2);
+            break;
+        case "Вычетание":
+            return subtraction($arg1, $arg2);
+            break;
+        case "Деление":
+            return division($arg1, $arg2);
+            break;
+        default:
+            echo("Заданная функция ещё не реализована!");
+            break;
+    }
+}
+
 //Задание 5
 
 ?>
