@@ -1,57 +1,94 @@
 <?php
-date_default_timezone_set('UTC');
-$title = 'title для шестьнадцатой лабораторной';
-$h1  = 'h1 для шестьнадцатой лабораторной';
-$dateYear = date("Y");
 
-function GetDeclensions() {
-    $dateHour = (int)date('H');
-    $dateMinutes = (int)date('m');
-    $result = (string)$dateHour;
+//Задание 1
 
-    if ($dateHour == 1 or $dateHour == 21 ) {
+$a = 9;
+$b = 10;
 
-        $result .= ' час ';
-
-    }else if ($dateHour >= 5 and $dateHour <= 20) {
-        
-        $result .= ' часов ';
-
-    } else {
-        
-        $result .= ' часа ';
-
-    }
-
-    $result .= (string)$dateMinutes;
-
-    if ($dateMinutes != 11 and substr(((string)$dateMinutes),-1) == "1") {
-        
-        $result .= ' минута';
-
-    } else if ((substr(((string)$dateMinutes), -1) == "2" or substr(((string)$dateMinutes), -1) == "3" or substr(((string)$dateMinutes), -1) == "4") and $dateMinutes < 12 and $dateMinutes > 14) {
-        
-        $result .= ' минуты';
-
-    } else {
-        
-        $result .= ' минут';
-
-    }
-
-    return $result;
+if ($a >= 0 and $b >= 0) {
+    echo($a - $b);
+} else if ($a < 0 and $b < 0) {
+    echo($a * $b);
 }
+else{
+    echo($a + $b);
+}
+
+//Задание 2
+echo("\n");
+$a = 7;
+
+switch ($a) {
+    case 0:
+        echo(" 0");
+    case 1:
+        echo(" 1");
+
+    case 2:
+        echo(" 2");
+    case 3:
+        echo(" 3");
+    case 4:
+        echo(" 4");
+    case 5:
+        echo (" 5");
+    case 6:
+        echo(" 6");
+    case 7:
+        echo(" 7");
+    case 8:
+        echo(" 8");
+    case 9:
+        echo(" 9");
+    case 10:
+        echo(" 10");
+    case 11:
+        echo(" 11");
+    case 12:
+        echo(" 12");
+    case 13:
+        echo(" 13");
+    case 14:
+        echo(" 14");
+    case 15:
+        echo(" 15");
+        break;
+    default:
+        echo("Выходит за рамки массива!");
+}        
+
+//Задание 3
+
+function summation($a, $b){
+    return $a + $b;
+}
+
+function subtraction($a, $b){
+    return $a - $b;
+}
+
+function multiplication($a, $b){
+    return $a * $b;
+}
+
+function division($a, $b){
+    if($b != 0) {
+        return $a / $b;
+    }  
+}
+
+//Задание 4
+
+//Задание 5
+
 ?>
 
 <!DOCTYPE html>
   <html lang="ru">
   <head>
-    <title><?= $title; ?></title>
+    <title>title</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <h1><?= $h1; ?></h1>
-    <p>Год: <?= $dateYear;?></p>
-    <p>Время: <?= GetDeclensions(); ?></p>
   </body>
 </html>
