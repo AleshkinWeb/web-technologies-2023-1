@@ -121,6 +121,9 @@ function power($val, $pow){
   <head>
     <title>title</title>
     <link rel="stylesheet" href="css/style.css">
+    <p>Год метод первый: <?=date("Y")?></p>
+    <p>Год метод второй: <?echo(date("Y"))?></p>
+    <p>Год метод третий: <?print(date("Y"))?></p>
   </head>
   <body>
   </body>
