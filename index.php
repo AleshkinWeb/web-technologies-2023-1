@@ -101,6 +101,19 @@ function mathOperation($arg1, $arg2, $operation){
 
 //Задание 5
 
+
+//Задание 6
+
+function power($val, $pow){
+    if ($pow == 0) {
+        return 1;
+    }else if ($pow > 0) {
+        return $val * power($val, $pow - 1);
+    }else if ($pow < 0) {
+        return power($val, $pow + 1) / $val;
+    }
+}
+
 ?>
 
 <!DOCTYPE html>
