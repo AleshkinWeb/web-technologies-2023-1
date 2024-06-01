@@ -11,14 +11,21 @@
 <body>
 <header class="header">
     <nav class="nav">
-        <a href="/index.html">index</a>
-        <a href="/user.html">user</a>
-        <a href="/logout.html">logout</a>
+        <a href="index.html">index</a>
+        <a href="user.html">user</a>
+        <a href="logout.html">logout</a>
     </nav>
 </header>
 
 <main class="main">
-
+    <form id="addForm" class="form">
+        <h1>ToDo List</h1>
+        <input type="text" class="text-field__input" name="description">
+        <button type="submit" class="button">
+          Создать новую задачу
+        </button>
+    </form>
+    <div class="todoContainer"></div>
 </main>
 
 <div class="loader-wrapper" data-loading>
