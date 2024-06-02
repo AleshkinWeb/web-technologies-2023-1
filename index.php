@@ -1,159 +1,99 @@
 <?php
-//Задание 1
 
-function printWhile(){
-    $iterator = 0;
-    $max = 10;
-    do{
-        if ($iterator == 0) {
-            echo $iterator . " - это ноль.\n";
-        }
-        else if($iterator % 2 == 0){
-            echo $iterator . " - это четное число.\n";
-        } else{
-            echo $iterator . " - это нечетное число.\n";
-        }
-        $iterator++;
-    }while($iterator <= $max);
+//Запускал, писал, тестировал через xamml
+
+$dirs = array("original/", "small/", "logs/");
+
+function galleryUpdate($dirs) {
     
-}
-
-//Задание 2
-
-$array = array("Московская область" => array("Москва", "Зеленоград", "Клин"),
-    "Ленинградская область" => array("Санкт-Петербург", "Всеволожск", "Павловск", "Кронштадт"),
-    "Рязанская область" => array("Рязань", "Скопин", "Сасово"));
-
-foreach ($array as $city => $cities) {
-    echo ($city .":\n");
-    foreach ($cities as $town){
-        echo ($town .", ");
+    foreach($dirs as $dir){
+        if (!is_dir($dir)) {
+            mkdir($dir);
+        }
     }
-    echo ("\n");
-}
-
-
-//Задание 3
-
-
-function transmorph($text) {
     
-    $alphabet = array(
-        'а' => 'a',
-        'б' => 'b', 
-        'в' => 'v', 
-        'г' => 'g', 
-        'д' => 'd',
-        'е' => 'e', 
-        'ё' => 'yo', 
-        'ж' => 'zh', 
-        'з' => 'z', 
-        'и' => 'i',
-        'й' => 'y', 
-        'к' => 'k', 
-        'л' => 'l', 
-        'м' => 'm', 
-        'н' => 'n',
-        'о' => 'o', 
-        'п' => 'p', 
-        'р' => 'r', 
-        'с' => 's', 
-        'т' => 't',
-        'у' => 'u', 
-        'ф' => 'f', 
-        'х' => 'h', 
-        'ц' => 'ts', 
-        'ч' => 'ch',
-        'ш' => 'sh', 
-        'щ' => 'sch', 
-        'ъ' => '', 
-        'ы' => 'y', 
-        'ь' => '',
-        'э' => 'e', 
-        'ю' => 'yu', 
-        'я' => 'ya',
-    );
+    if(!file_exists("logs/log.txt")) { file_put_contents("logs/log.txt", ""); };
 
-    $result = '';
-    $text = mb_strtolower($text); 
-
-    
-    for ($i = 0; $i < mb_strlen($text); $i++) {
-        $char = mb_substr($text, $i, 1);
-        
-        if (array_key_exists($char, $alphabet)) {
-            $result .= $alphabet[$char];
-        } else {
-            $result .= $char; 
-        }
+    foreach (array_slice(scandir($dirs[0]), 2) as $image) {
+        echo '<a target="_blank" href="' . $dirs[0] . $image . '">
+        <img src="' . $dirs[1] . $image . '" alt="\'$image\'"></a>';
     }
-    return $result;
+
+};
+
+function loging(){
+
+    if(!file_exists("logs/log.txt")) exit("Файл не найден"); 
+    $file_arr = file("logs/log.txt"); 
+    $lines = count($file_arr); 
+
+    $dir = opendir("logs/");
+    $count = 0;
+    while($file = readdir($dir))
+    {
+        if($file == '.' || $file == '..' || is_dir("logs/log.txt")) continue;
+        $count++;
+    }
+
+    $logTime = date('H:i:s');
+
+    if ($lines < 10){
+        file_put_contents("logs/log.txt", $logTime . PHP_EOL, FILE_APPEND);
+    }
+    else {
+        copy("logs/log.txt", "logs/log".($count+1).".txt");
+        unlink("logs/log.txt");
+        file_put_contents("logs/log.txt", $logTime . PHP_EOL, FILE_APPEND);
+    }
 }
 
-echo ("\n");
+function check_files() {
+    $file = "original/". basename($_FILES['img']['name']);
 
-//Задание 5
-
-echo ("\n");
-
-$menu =  [
-    ['name' => 'Меню', 'children' => 
-        [
-            [
-                'name' => 'Верхний уровень', 'children' => 
-                [
-                    [
-                        'name' => 'Средний уровень', 'children' => 
-                        [
-                            [
-                                'name' => 'Нижний уровень'
-                            ],
-                        ]
-                    ]
-                ]
-            ]
-        ],
-    ],
-];
-
-function createMenu($menu) {
-    echo ("<ul>");
-    foreach ($menu as $value) {
-        echo ("<li>");
-        echo  ("{$value['name']}");
-        if (isset($value['children'])) {
-            createMenu($value['children']);
-        }
-        echo ("</li>");
+    if (file_exists($file)) {
+        echo "Файл уже существует!";
+        return false;
     }
-    echo ("</ul>");
-}
-createMenu($menu);
 
-//Задание 6
-echo ("\n");
-foreach ($array as $city => $cities) {
-    echo ($city .":\n");
-    foreach ($cities as $town){
-        $str_town = mb_strtolower($town);
-        if (mb_substr($str_town, 0, 1) == 'к') {
-            echo ($str_town .", ");
-        }
+    if ($_FILES['img']['type']  != 'image/png') {
+        echo "Не допустимое расширение файла" ;
+        return false;
     }
-    echo ("\n");
+
+    if ($_FILES['img']['size'] > 1234561) {
+        echo "Размер файла выше допустимого";
+        return false;
+    }
+
+    return true;
 }
 
+if (!empty($_FILES)) {
+    if (check_files()) {
+        $path = "original/" . $_FILES["img"]["name"];
+        if (move_uploaded_file($_FILES['img']['tmp_name'], $path)) {
+            $img = imagecreatefrompng($path);
+            $imgScale = imagescale($img , 100);
+            imagepng($imgScale, "small/" . $_FILES["img"]["name"]);
+        }
+    }
+}
 ?>
 
 <!DOCTYPE html>
-  <html lang="ru">
+<html lang="ru">
   <head>
-    <title>title</title>
-    <link rel="stylesheet" href="css/style.css">
-    <p>Год метод первый: <?=date("Y")?></p>
-    <p>Год метод второй: <?echo(date("Y"))?></p>
-    <p>Год метод третий: <?print(date("Y"))?></p>
+    <title>Галерея фотографий</title>
   </head>
-  <body>
-  </body>
+    <body>
+        <?php galleryUpdate($dirs);?>
+        <form method="post" enctype="multipart/form-data">
+            <input type="file" name="img">
+            <input type="submit" value="Загрузить">
+        </form>
+    </body>
 </html>
+
+<?php 
+loging();
+?>
